@@ -1,6 +1,7 @@
 import cors from "cors";
 import express from "express";
 import { usuarioRoutes } from "../routes/usuario.routes";
+import { loginRoutes } from "../routes/login.routes";
 
 export function createApp() {
     const app = express();
@@ -8,9 +9,9 @@ export function createApp() {
     app.use(cors());
 
     app.use("/usuario", usuarioRoutes());
+    app.use("/login", loginRoutes());
 
     // app.use("/tarefas", tarefasRoutes());
-    // app.use("/login", loginRoutes());
 
     return app;
 }
