@@ -42,10 +42,10 @@ export class UsuarioService {
             };
         }
 
-        if(data.senha.length < 6) {
+        if(data.senha.length < 4) {
             return {
                 ok: false,
-                message: "Senha deve ter pelo menos 6 caracteres.",
+                message: "Senha deve ter pelo menos 4 caracteres.",
                 code: 400
             };
         }
