@@ -28,8 +28,6 @@ export class LoginService {
         const token = this.generateToken(usuario)
 
 
-
-
         return {
             ok: true,
             message: "Login realizado com sucesso!",

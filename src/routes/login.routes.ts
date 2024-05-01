@@ -1,7 +1,6 @@
 import { Router } from "express";
 import { LoginController } from "../controllers/login.controller";
 
-
 export function loginRoutes(){
     const router = Router({
         mergeParams: true,
