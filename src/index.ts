@@ -3,6 +3,7 @@ import * as dotenv from "dotenv";
 import express from "express";
 import { usuarioRoutes } from "./routes/usuario.routes";
 import { loginRoutes } from "./routes/login.routes";
+import { tarefaRoutes } from "./routes/tarefa.routes";
 dotenv.config();
 
 
@@ -12,6 +13,7 @@ app.use(cors());
 
 app.use("/", usuarioRoutes());
 app.use("/", loginRoutes());
+app.use("/", tarefaRoutes());
 
 app.listen(process.env.PORT, () => {
     console.log("API está rodando!");
