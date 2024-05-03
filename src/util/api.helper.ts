@@ -2,7 +2,7 @@ import cors from "cors";
 import express from "express";
 import { usuarioRoutes } from "../routes/usuario.routes";
 import { loginRoutes } from "../routes/login.routes";
-import { tarefasRoutes } from "../routes/tarefa.routes";
+import { tarefaRoutes } from "../routes/tarefa.routes";
 
 export function createApp() {
     const app = express();
@@ -11,7 +11,7 @@ export function createApp() {
 
     app.use("/usuario", usuarioRoutes());
     app.use("/login", loginRoutes());
-    app.use("/tarefas", tarefasRoutes());
+    app.use("/tarefa", tarefaRoutes());
 
     return app;
 }
